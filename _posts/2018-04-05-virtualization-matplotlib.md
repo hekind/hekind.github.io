@@ -2,18 +2,18 @@
 layout: post
 title:  "数据可视化之matplotlib!"
 date:   2018-04-05
-categories: python
-tags: python virtualization matplotlib
+categories: Python
+tags: Virtualization Matplotlib
 ---
 
 ## 0. 前言
 数据可视化，就是通过图形、图表等方法将原数据中的关系展示出来。
 
-![](/assets/mat_logo.svg)
+![](/styles/images/virtualization-matplotlib/mat_logo.svg)
 
 matplotlib，是一个python下**2D绘图库**，它可以跨平台地生成各种高质量的图标。 matplotlib可以使我们很轻松地绘制如直方图、功率图、条形图和散点图等。 pyplot是matplotlib下的一个模块，它可以提供给我们类似于MATLAB的界面，可以很轻松地画出想要的图形。
 
-![简介](/assets/matplotlib_brief.png)
+![简介](/styles/images/virtualization-matplotlib/matplotlib_brief.png)
 
 这篇文章打算介绍一些基本的方法，可以根据pyplot模块，方便快捷的画出目标图形。 暂时只打算介绍pyplot模块的状态机环境，不打算深入介绍面向对象接口(OO接口)。 这篇文章的方法应对一些普通的散点图、折线图之类的没有问题，如果以后需要更复杂的，会再写一片增补版的。 文章中涉及到的两段代码上传。
 
@@ -22,7 +22,7 @@ matplotlib，是一个python下**2D绘图库**，它可以跨平台地生成各�
 ## 1. matplotlib架构
 ### 1.1 matplotlib框架
 
-![框架](/assets/framework.png)
+![框架](/styles/images/virtualization-matplotlib/framework.png)
 
 matplotlib框架分为三层，这三层构成了一个栈，上层可以调用下层。
 
@@ -34,7 +34,7 @@ matplotlib框架分为三层，这三层构成了一个栈，上层可以调用�
 
 ### 1.2 编程接口
 
-![编程接口](/assets/code_framework.png)
+![编程接口](/styles/images/virtualization-matplotlib/code_framework.png)
 
 第一层状态机环境，是由pyplot提供的。
 
@@ -45,7 +45,7 @@ matplotlib框架分为三层，这三层构成了一个栈，上层可以调用�
 Python科学计算基础教程希望大家使用pyplot接口（也就是状态及环境），因为该环境封装了画图的方法，绘图非常方便。 但是官方文档希望大家使用**第一级面向对象接口**，因为该方法综合了pyplot和oo接口，是一个很好的选择。 我觉得，如果pyplot提供的功能可以满足绘图需要，直接采用即可；否则，使用后者绘图。
 ## 2. matplotlib的绘图概念
 
-![图的剖析](/assets/anatomy_of_figure.png)
+![图的剖析](/styles/images/virtualization-matplotlib/anatomy_of_figure.png)
 
 一些重要的图的概念
 
@@ -54,7 +54,7 @@ Python科学计算基础教程希望大家使用pyplot接口（也就是状态�
 - axis(坐标轴),坐标系中的一条轴，包含大小限制、刻度和刻度标签。
 - artist(艺术家),图中所有的对象都是artis，当图形显示时，所有的艺术家都会被绘制到画布上。
 
-![图、坐标系、坐标轴](/assets/figure_axes_axis.png)
+![图、坐标系、坐标轴](/styles/images/virtualization-matplotlib/figure_axes_axis.png)
 
 - 一个figure(图)可以包含多个axes(坐标系)，但是一个axes只能属于一个figure。
 - 一个axes(坐标系)可以包含多个axis(坐标轴)，包含两个即为2d坐标系，3个即为3d坐标系。
@@ -83,7 +83,7 @@ matplotlib.pytplot包含了一系列类似于matlab的画图函数。 它的函�
     plt.plot([1,2],[1,2],'r--+')
 	plt.show()
 
-![格式](/assets/format.png)
+![格式](/styles/images/virtualization-matplotlib/format.png)
 
 绘制出了该图，包含两个点(1,1)和(2,2)，matplotlib函数输入一般为array。
 
@@ -95,7 +95,7 @@ matplotlib.pytplot包含了一系列类似于matlab的画图函数。 它的函�
 
 如果这三个参数都小于10，可以省略','。 比如subplot(211)=subplot(2,1,1)，都返回如图红色的坐标系。
 
-![子图](/assets/subplot.png)
+![子图](/styles/images/virtualization-matplotlib/subplot.png)
 
 ### 3.3 添加文本(字符串)
 
@@ -109,9 +109,9 @@ title(‘text’)，图形的标题。
 
 显示为
 
-![expression](/assets/tex_expression.gif)
+![expression](/styles/images/virtualization-matplotlib/tex_expression.gif)
 
-![tex](/assets/tex.png)
+![tex](/styles/images/virtualization-matplotlib/tex.png)
 
 > TEX，是一个由美国计算机教授高德纳（Donald Ervin Knuth）编写的功能强大的排版软件。它在学术界十分流行，特别是数学、物理学和计算机科学界。TEX被普遍认为是一个优秀的排版工具，特别是在处理复杂的数学公式时。常见的发行版为LaTex。
 
@@ -121,21 +121,21 @@ pyplot提供了matplotlib绘图模块的一个访问接口，提供了一些常�
 
 #### 3.4.1 函数的总结
 
-![函数总结](/assets/pyplot_function.png)
+![函数总结](/styles/images/virtualization-matplotlib/pyplot_function.png)
 
-![绘制图形](/assets/pyplot_function_image.png)
+![绘制图形](/styles/images/virtualization-matplotlib/pyplot_function_image.png)
 
 [http://matplotlib.org/api/pyplot_summary.html](http://matplotlib.org/api/pyplot_summary.html "官网pyplot函数总结")
 
 #### 3.4.2 函数参数，格式(format)的总结
 
-![格式](/assets/pyplot_attribute.png)
+![格式](/styles/images/virtualization-matplotlib/pyplot_attribute.png)
 
 [http://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot](http://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "plot参数")
 
 #### 3.4.3 pyplot绘制模块举例
 
-![pyplot小例子](/assets/pyplot_instance.png)
+![pyplot小例子](/styles/images/virtualization-matplotlib/pyplot_instance.png)
 
 通常我们在绘图过程中需要关注一下几个点：
 
@@ -143,7 +143,7 @@ pyplot提供了matplotlib绘图模块的一个访问接口，提供了一些常�
 2. title，标题。
 3. 坐标轴标注，x、y轴的含义。
 4. 刻度线，我们可以设置x、y轴的坐标，比如让它距离近一些或者远一些。也可以不管。
-5. 刻度注释，对应刻度线上的标注，我们可以使用Tex来编写数学公式，是的显示的不是pi而是![pi](/assets/tex_pi.gif)。
+5. 刻度注释，对应刻度线上的标注，我们可以使用Tex来编写数学公式，是的显示的不是pi而是![pi](/styles/images/virtualization-matplotlib/tex_pi.gif)。
 6. 图例，图例需要在绘制图形的时候传入label的值，最后调用lengend()来显示之前的label。
 
 代码如下：
@@ -179,7 +179,7 @@ pyplot提供了matplotlib绘图模块的一个访问接口，提供了一些常�
 
 具体显示结果：
 
-![例子](/assets/easy_plot.png)
+![例子](/styles/images/virtualization-matplotlib/easy_plot.png)
 
 ## 4. 绘图实例
 

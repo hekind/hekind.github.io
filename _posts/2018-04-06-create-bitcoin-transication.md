@@ -2,8 +2,8 @@
 layout: post
 title:  "手动构建比特币交易"
 date:   2018-04-06
-categories: translation
-tags: bitcoin
+categories: Translation
+tags: Bitcoin
 ---
 
 > 原文转自腾讯云社区[https://cloud.tencent.com/developer/article/1058930](https://cloud.tencent.com/developer/article/1058930 "原文")，**版权所有，如需转载，请联系翻译作者**
