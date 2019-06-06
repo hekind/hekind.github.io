@@ -2,7 +2,7 @@
 layout: post
 title:  "手动构建比特币交易"
 date:   2018-04-06
-categories: Translation
+categories: Miscellaneous
 tags: Bitcoin
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "数据可视化之matplotlib!"
+title:  "数据可视化之matplotlib"
 date:   2018-04-05
-categories: Python
-tags: Virtualization Matplotlib
+categories: Miscellaneous
+tags: Virtualization
 ---
 
 ## 0. 前言
